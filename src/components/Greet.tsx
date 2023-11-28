@@ -1,11 +1,19 @@
-import React from 'react'
+import React from "react";
 
 type GreetProps = {
-  name:string
-}
+  name: string;
+  messageCount: number;
+  isLoggedIn: boolean;
+};
 
-export const Greet=(props:GreetProps)=> {
+export const Greet = (props: GreetProps) => {
   return (
-    <div><h2>welcome {props.name}! You have 10 new messages</h2></div>
-  )
-}
+    <div>
+      <h2>
+        {props.isLoggedIn
+          ? `welcome ${props.name}! You have ${props.messageCount} new messages`
+          : `Welcome Guest`}
+      </h2>
+    </div>
+  );
+};
