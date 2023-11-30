@@ -1,4 +1,5 @@
 import "./App.css";
+import { Button } from "./components/Button";
 
 import { Greet } from "./components/Greet";
 import { Heading } from "./components/Heading";
@@ -37,6 +38,9 @@ function App() {
         <Heading>Oscar goes to Breat</Heading>      
       </Oscar>
       <Greet name="Devesh" isLoggedIn={true} />
+      <Button handleClick={()=>{
+        console.log(`I am Devesh`)
+      }} />
     </div>
   );
 }
