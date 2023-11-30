@@ -38,8 +38,8 @@ function App() {
         <Heading>Oscar goes to Breat</Heading>      
       </Oscar>
       <Greet name="Devesh" isLoggedIn={true} />
-      <Button handleClick={()=>{
-        console.log(`I am Devesh`)
+      <Button handleClick={(event, id)=>{
+        console.log(`I am Devesh`,event, id)
       }} />
     </div>
   );
